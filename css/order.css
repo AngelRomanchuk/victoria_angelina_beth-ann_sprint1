@@ -1,0 +1,598 @@
+/* Author: Angelina Romanchuk, Victoria Breen, Beth-Ann Penney */
+/* Date: June 27, 2024 */
+/* Description: Website with three pages - home, menu, order now. For Gary's Blue Diner. */
+/* They are functional with information about diner, food and posibility to order. */
+
+
+/* The popup form - hidden by default */
+.formPopup {
+  display: none;
+  position: fixed;
+  height: 500px;
+  overflow-y: auto;
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1000; 
+  background-color: white;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 8px;
+  max-width: 800px;
+  color: black;
+}
+.menuToOrder {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.foodBox {
+  width: 200px;
+  height: 300px;
+  background-color: lightgrey;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px black;
+  padding-top: 10px;
+  margin: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.plus {
+  width: 20%;
+  height: auto;
+  background-color: #ff914d;
+  color: white;
+  font-size: 20pt;
+}
+.plus:hover {
+  width: 20%;
+  height: auto;
+  background-color: white;
+  color: #ff914d;
+}
+.minus {
+  width: 20%;
+  height: auto;
+  background-color: #3153bb;
+  color: white;
+  font-size: 20pt;
+}
+.minus:hover {
+  width: 20%;
+  height: auto;
+  background-color: white;
+  color: #3153bb;
+}
+.btnClose {
+  width: 50%;
+  height: auto;
+  background-color: #ff914d;
+  color: white;
+  font-size: 16pt;
+  margin: 5% 25%;
+}
+.btnClose:hover {
+  width: 50%;
+  height: auto;
+  background-color: #ffb765;
+  color: white;
+  font-size: 16pt;
+  margin: 5% 25%;
+}
+
+/* Main Content */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+.bold {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #ffb765;
+}
+.textSize {
+  font-size: 14pt;
+}
+/* Nav styles ****************************************************************/
+nav {
+  background-color: #ff914d;
+}
+.navMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #31393c;
+  border-bottom: 2px solid #3153bb;
+}
+.navMenu img.logo {
+  height: 150px;
+  width: 200px;
+}
+.navMenu a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navMenu a:hover {
+  background-color: #ff914d;
+  color: #3153bb;
+  text-shadow: none;
+}
+#Ordering {
+  background-color: #2176ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#Ordering:hover {
+  background-color: #3153bb;
+  transform: scale(1.2);
+} 
+#Ordering:active {
+  background-color: #2176ff;
+  transform: scale(0.95);
+}
+
+/* Main section style *********************************************************/
+main{
+  width: 100%;
+  height: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Banner section */
+#banner {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/OrderPageBanner.png);
+  background-color: #3153bb;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+#banner h1{
+  font-size: 48pt;
+  text-align: center;
+  margin-top: 100px;
+}
+#banner p{
+  font-size: 24pt;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Menu Section */
+#menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #3153bb;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+#menu h1 {
+  font-size: 28pt;
+}
+
+/* Menu buutons */
+.menuButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+.Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ff914d;
+  border-radius: 5%;
+  padding: 10px;
+  font-size: 16pt;
+  color: white;
+  font-weight: 700;
+}
+.menuImg {
+  width: auto;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.Button:hover{
+  background-color: white;
+  color: #ff914d;
+}
+
+#menuForm label {
+  font-size: 16pt;
+}
+#menuForm input {
+  width: 80%;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 5%;
+  padding-left: 8px;
+}
+.menuAction {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+#menuAction input {
+  width: 150px;
+  height: 40px;
+  margin: 20px 200px 20px 200px;
+  border-radius: 5%;
+  border: none;
+  background-color: #ff914d;
+  color: white;
+  font-size: 14pt;
+  font-weight: 600;
+}
+#menuAction input:hover {
+  border-radius: 5%;
+  background-color: white;
+  color: #ff914d;
+  font-size: 14pt;
+  font-weight: 600;
+}
+thead {
+  font-size: 18pt;
+  color: #ff914d;
+}
+td {
+  width: 100px;
+  padding: 10px;
+}
+#menuList tr{
+  font-size: 14pt;
+}
+#menuCheck {
+  margin-top: 20px;
+}
+
+
+.end{
+  display: flex;
+  flex-direction: row;
+}
+.btnEnd {
+  width: 20%;
+  border-radius: 5%;
+  background-color: #ff914d;
+  color: white;
+  font-size: 14pt;
+  font-weight: 600;
+  margin: 20px;
+}
+.btnEnd:hover {
+  width: 20%;
+  border-radius: 5%;
+  background-color: white;
+  color: #ff914d;
+  font-size: 14pt;
+  font-weight: 600;
+  margin: 20px;
+}
+
+/* Payment Section */
+#payment {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #3153bb;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+#payment h1 {
+  font-size: 28pt;
+  margin-top: 30px;
+}
+/* Information Form */
+#infoForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 200px 0px 200px;
+}
+.formBox {
+  width: 100%;
+  text-align: left;
+  width: 48%;
+}
+.formAction {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+  width: 100%;
+}
+.formBox input {
+  width: 80%;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 5%;
+  padding-left: 8px;
+}
+.formBox label{
+  font-size: 16pt;
+}
+.formAction input {
+  width: 150px;
+  height: 40px;
+  margin: 5% 20% 5% 20%;
+  border-radius: 5%;
+  border: none;
+  background-color: #ff914d;
+  color: white;
+  font-size: 14pt;
+  font-weight: 600;
+}
+.formAction input:hover {
+  border-radius: 5%;
+  background-color: white;
+  color: #ff914d;
+  font-size: 14pt;
+  font-weight: 600;
+}
+
+#infoCheck p{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 400px;
+}
+
+/* Footer styles *************************************************************/
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3153bb;
+  border-top: 2px solid #ff914d;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+footer img {
+  height: 130px;
+  width: 160px;
+}
+
+.navFooter h3,.nav,p{
+  text-align: center;
+}
+footer h3 {
+  color: #ff914d;
+  font-size: 18pt;
+}
+footer .nav a{
+  color: white;
+  padding: 0px 4px 0px 4px;
+  font-size: 12pt;
+}
+footer .nav a:hover{
+  color: white;
+  padding: 0px 4px 0px 4px;
+  font-size: 12pt;
+  text-decoration: none;
+}
+.signFooter{
+  color: white;
+  font-size: 8pt;
+}
+
+.socialMedia p,.linkMedia{
+  text-align: center;
+}
+.socialMedia {
+  margin-top: 10px;
+  color: white;
+  font-size: 16pt;
+}
+/* Social Media */
+.fa {
+  padding: 8px;
+  margin: 0px 5px 0px 5px;
+  font-size: 30px;
+  border-radius: 5%;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ff5eb7;
+  color: white;
+}
+
+
+
+
+/* Media sizes */
+/* Sizes for main content */
+@media (max-width: 1000px) {
+  #banner h1{
+    font-size: 36pt;
+    text-align: center;
+    margin-top: 100px;
+  }
+  #banner p{
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .menuButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  .Button {
+    width: 50%;
+    margin: 3% 25%;
+  }
+  #infoForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .formBox {
+    width: 100%;
+    text-align: left;
+  }
+  .formAction {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .formBox input {
+    width: 50%;
+    height: 30px;
+  }
+}
+/* Sizes for nav and footer */
+@media (max-width: 850px) {
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navMenu img.logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .navMenu a {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .Ordering {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  footer img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  footer h3 {
+    font-size: 16pt;
+  }
+
+  footer .nav a {
+    font-size: 10pt;
+    padding: 0px 4px;
+  }
+
+  .signFooter {
+    font-size: 6pt;
+  }
+
+  .socialMedia {
+    font-size: 12pt;
+  }
+
+  .fa {
+    font-size: 20px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navMenu {
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+
+  .navMenu img.logo {
+    height: 200px;
+    width: auto;
+  }
+
+  .navMenu a {
+    font-size: 20px;
+    padding: 14px 14px;
+  }
+
+  .Ordering {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  footer {
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  footer img {
+    height: 130px;
+    width: 160px;
+  }
+
+  footer h3 {
+    font-size: 20pt;
+  }
+
+  footer .nav a {
+    font-size: 12pt;
+  }
+
+  .signFooter {
+    font-size: 8pt;
+  }
+
+  .socialMedia {
+    font-size: 16pt;
+  }
+
+  .fa {
+    font-size: 30px;
+    width: 35px;
+  }
+}

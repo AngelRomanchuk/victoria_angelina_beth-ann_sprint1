@@ -1,0 +1,360 @@
+/* Author: Beth-Ann Penney, Angelina Romanchuk, Victoria Breen */
+/* Date: June 27, 2024 */
+/* Description: Website with three pages - home, menu, order now. For Gary's Blue Diner. */
+/* They are functional with information about diner, food and posibility to order. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+nav {
+    background-color: #ff914d;
+  }
+   
+  .navMenu {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 5px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #31393c;
+    border-bottom: 2px solid #3153bb;
+  }
+   
+  .navMenu img.logo {
+    height: 150px;
+    width: 200px;
+  }
+   
+  .navMenu a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+   
+  .navMenu a:hover {
+    background-color: #ff914d;
+    color: #3153bb;
+    text-shadow: none;
+  }
+
+  
+  
+  #Ordering {
+    background-color: #2176ff; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+   
+  #Ordering:hover {
+    background-color: #3153bb;
+    transform: scale(1.2);
+  }
+   
+  #Ordering:active {
+    background-color: #2176ff;
+    transform: scale(0.95);
+  }
+  h1 {
+    text-align: center;
+    color: #3153bb;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-shadow: 1px 1px black;
+    width: 100%;
+  }
+  
+  /************************************************************************************/
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  border-bottom: 2px solid #3153bb;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust the gap between items */
+}
+.Customer
+.milk-shakes-1,  
+.making-burgers-on-grill-1, 
+.churros-1, 
+.donut-holes-1, 
+.brownie-1, 
+.pretzel-1, 
+.beef-burger-1 {
+    border-style: solid;
+    border-color: #ff914d;
+    border-width: 5px;
+    object-fit: cover;
+}
+
+.milk-shakes-1 {
+    border-radius: 75px;
+    width: 800px;
+    height: 400px;
+}
+
+.making-burgers-on-grill-1 {
+    border-radius: 10px;
+    width: 1200px;
+    height: 350px;
+}
+
+.churros-1 {
+    border-radius: 50px;
+    width: 530px;
+    height: 400px;
+}
+
+.donut-holes-1 {
+    border-radius: 50px;
+    width: 530px;
+    height: 400px;
+}
+
+.brownie-1 {
+    border-radius: 50px;
+    width: 530px;
+    height: 400px;
+}
+
+.pretzel-1 {
+    border-radius: 50px;
+    width: 530px;
+    height: 400px;
+}
+
+.beef-burger-1 {
+    border-radius: 50px;
+    width: 530px;
+    height: 400px;
+}
+.Customer {
+  border-radius: 50px;
+  width: 350px;
+  height: 400px;
+  margin-left: 38%;
+}
+ul, address {
+  font-size: 20px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style-type: none;
+}
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 15px;
+}
+.orange {
+  color: #ff914d;
+}
+
+ /* Footer styles *************************************************************/
+footer {
+display: flex;
+justify-content: space-around;
+background-color: #3153bb;
+border-top: 2px solid #ff914d;
+width: 100%;
+height: auto;
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+footer img {
+  height: 130px;
+  width: 160px;
+}
+
+.navFooter h3,.nav,p{
+  text-align: center;
+  margin: 0;
+}
+footer h3 {
+  color: #ff914d;
+  font-size: 18pt;
+}
+footer .nav a{
+  color: white;
+  padding: 0px 4px 0px 4px;
+  font-size: 12pt;
+}
+footer .nav a:hover{
+  color: white;
+  padding: 0px 4px 0px 4px;
+  font-size: 12pt;
+  text-decoration: none;
+}
+.signFooter{
+  color: white;
+  font-size: 8pt;
+}
+
+.socialMedia p,.linkMedia{
+  text-align: center;
+}
+.socialMedia {
+  margin-top: 10px;
+  color: white;
+  font-size: 16pt;
+}
+/* Social Media */
+.fa {
+  padding: 8px;
+  margin: 0px 5px 0px 5px;
+  font-size: 30px;
+  border-radius: 5%;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ff5eb7;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .navMenu img.logo {
+    height: 100px;
+    width: auto;
+  }
+ 
+  .navMenu a {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+ 
+  .Ordering {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+ 
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+ 
+  footer img {
+    height: 80px;
+    width: auto;
+  }
+ 
+  footer h3 {
+    font-size: 16pt;
+  }
+ 
+  footer .nav a {
+    font-size: 10pt;
+  }
+ 
+  .signFooter {
+    font-size: 6pt;
+  }
+ 
+  .socialMedia {
+    font-size: 12pt;
+  }
+ 
+  .fa {
+    font-size: 20px;
+    width: 25px;
+  }
+
+  .Customer {
+    margin-left: 20%;
+  }
+}
+ 
+@media (min-width: 1024px) {
+  .navMenu {
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+ 
+  .navMenu img.logo {
+    height: 200px;
+    width: auto;
+  }
+ 
+  .navMenu a {
+    font-size: 20px;
+    padding: 14px 14px;
+  }
+ 
+  .Ordering {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+ 
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 140px;
+    padding: 0;
+  }
+ 
+  footer img {
+    height: 130px;
+    width: 160px;
+  }
+ 
+  footer h3 {
+    font-size: 20pt;
+  }
+ 
+  footer .nav a {
+    font-size: 12pt;
+  }
+ 
+  .signFooter {
+    font-size: 8pt;
+  }
+ 
+  .socialMedia {
+    font-size: 16pt;
+  }
+ 
+  .fa {
+    font-size: 30px;
+    width: 35px;
+  }
+}

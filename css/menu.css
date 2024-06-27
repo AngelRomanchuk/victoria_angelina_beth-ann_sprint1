@@ -1,0 +1,348 @@
+/* Author: Victoria Breen, Beth-Ann Penney, Angelina Romanchuk */
+/* Date: June 27, 2024 */
+/* Description: Website with three pages - home, menu, order now. For Gary's Blue Diner. */
+/* They are functional with information about diner, food and posibility to order. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.menuContainer2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.menuItem,
+.menuItem2 {
+  background-color: #d3d3d3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 20px;
+  max-width: 275px;
+  text-align: center;
+  transition: transform 0.4s;
+  box-shadow: 1px 1px 1px black;
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.menuItem:hover,
+.menuItem2:hover {
+  transform: scale(1.08);
+}
+
+.menuItem img,
+.menuItem2 img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.menuItem h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.menuItem p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #31393c;
+}
+
+nav {
+  background-color: #ff914d;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #31393c;
+  border-bottom: 2px solid #3153bb;
+}
+
+.navMenu img.logo {
+  height: 150px;
+  width: 200px;
+}
+
+.navMenu a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navMenu a:hover {
+  background-color: #ff914d;
+  color: #3153bb;
+  text-shadow: none;
+}
+
+#h1,
+#h2,
+#h3,
+.chef {
+  text-align: center;
+}
+
+#h1title {
+  color: #3153bb;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+#h2 {
+  color: #ff914d;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 2px 1px 1px black;
+  font-size: 30px;
+}
+
+#h3 {
+  color: #3153bb;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 22px;
+}
+
+.chef {
+  color: #3153bb;
+}
+
+#Ordering {
+  background-color: #2176ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#Ordering:hover {
+  background-color: #3153bb;
+  transform: scale(1.2);
+}
+
+#Ordering:active {
+  background-color: #2176ff;
+  transform: scale(0.95);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3153bb;
+  border-top: 2px solid #ff914d;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+footer img {
+  height: 130px;
+  width: 160px;
+}
+
+.navFooter h3,
+.nav,
+p {
+  text-align: center;
+}
+
+footer h3 {
+  color: #ff914d;
+  font-size: 18pt;
+}
+
+footer .nav a {
+  color: white;
+  padding: 0px 4px;
+  font-size: 12pt;
+}
+
+footer .nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.signFooter {
+  color: white;
+  font-size: 8pt;
+}
+
+.socialMedia p,
+.linkMedia {
+  text-align: center;
+}
+
+.socialMedia {
+  margin-top: 10px;
+  color: white;
+  font-size: 16pt;
+}
+
+.fa {
+  padding: 8px;
+  margin: 0px 5px;
+  font-size: 30px;
+  border-radius: 5%;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ff5eb7;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .navMenu {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navMenu img.logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .navMenu a {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .Ordering {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  footer img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  footer h3 {
+    font-size: 16pt;
+  }
+
+  footer .nav a {
+    font-size: 10pt;
+    padding: 0px 4px;
+  }
+
+  .signFooter {
+    font-size: 6pt;
+  }
+
+  .socialMedia {
+    font-size: 12pt;
+  }
+
+  .fa {
+    font-size: 20px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navMenu {
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+
+  .navMenu img.logo {
+    height: 200px;
+    width: auto;
+  }
+
+  .navMenu a {
+    font-size: 20px;
+    padding: 14px 14px;
+  }
+
+  .Ordering {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  footer {
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  footer img {
+    height: 130px;
+    width: 160px;
+  }
+
+  footer h3 {
+    font-size: 20pt;
+  }
+
+  footer .nav a {
+    font-size: 12pt;
+  }
+
+  .signFooter {
+    font-size: 8pt;
+  }
+
+  .socialMedia {
+    font-size: 16pt;
+  }
+
+  .fa {
+    font-size: 30px;
+    width: 35px;
+  }
+}

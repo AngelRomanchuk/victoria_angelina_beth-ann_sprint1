@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="navMenu">
+            <img src="../img/GarysBlueHeader.png" alt="Logo" height="125" width="200" />
+            <a href="../html/index.html">Home</a>
+            <a href="../html/Menu.html">Menu</a>
+            <a href="../html/Specials.html">Specials</a>
+            <a href="../html/Contact.html">Contact Us</a>
+            <a href="./order.html" id="Ordering" href="../html/order.html">Order Now</a>
+   
+            <img src="../img/PageLogo.png" alt="Logo" height="125" width="200" />
+        </div>
+    </nav>
+    <main>
+        <section id="banner">
+            <h1>Eat The Food You Enjoy At Home</h1>
+            <p>With our fast delivery, food stays hot and fresh</p>
+        </section>
+        <section id="menu">
+            <h1>Discover our Menu</h1>
+            <div class="menuButtons">
+                <a class="Button" onclick="openMenuAppetizers()">
+                    <img src="../img/Mozza.jpg" class="menuImg">
+                    <p>Appetizers</p>
+                </a>
+                <a class="Button" onclick="openMenuMains()">
+                    <img src="../img/FishBurger.jpg" class="menuImg">
+                    <p>Mains</p>
+                </a>
+                <a class="Button" onclick="openMenuSides()">
+                    <img src="../img/Salad.jpg" class="menuImg">
+                    <p>Sides</p>
+                </a>
+                <a class="Button" onclick="openMenuDD()">
+                    <img src="../img/DonutHoles.jpg" class="menuImg">
+                    <p>Deserts & Drinks</p>
+                </a>
+            </div>
+            <form id="menuForm">
+                </br>
+                <label for="restrictionFood">Please let us know about your food restrictions and allergies:</label></br></br>
+                <input type="text" id="restrictionFood" name="restrictionFood"
+                placeholder="Please enter your restrictions or allergies here"
+                maxlength="300" tabindex="1"/>
+                </br></br>
+                <div id="menuAction">
+                    <input type="submit" value="Apply" class="form-control" />
+                    <input type="reset" value="Clear" class="form-control" />
+                </div>
+            </form>
+            <h1>Check Your order before proceed to payment</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody id="menuList">
+
+                </tbody>
+            </table>
+            <div id="menuCheck"></div>
+
+            </div>
+            <div calss="end">
+                <button type="button" class="btnEnd">Apply</button>
+                <button type="button" class="btnEnd" id="clearMenuData">Clear</button>
+            </div>
+        </section>
+
+        <!-- Appetizers To Order -->
+        <div class="formPopup" id="MenuAppetizers">
+            <div class="menuToOrder">
+                <div class="foodBox">
+                    <img class="" src="../img/LoadedFries.jpg" width="150px" height="100px">
+                    <h2>Loaded Frise</h2>
+                    <p class="price">price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'loadedFries', 'increment')">+</button>
+                        <p id="loadedFriesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'loadedFries', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Mozza.jpg" width="150px" height="100px">
+                    <h2>Mozzarella Sticks</h2>
+                    <p class="price">price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'mozzarellaSticks', 'increment')">+</button>
+                        <p id="mozzarellaSticksCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'mozzarellaSticks', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/OnionRings.jpg" width="150px" height="100px">
+                    <h2>Onion Rings</h2>
+                    <p class="price">price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'onionRings', 'increment')">+</button>
+                        <p id="onionRingsCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'onionRings', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Poutine.jpg" width="150px" height="100px">
+                    <h2>Poutine</h2>
+                    <p class="price">price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'poutine', 'increment')">+</button>
+                        <p id="poutineCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'poutine', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/PB.png" width="150px" height="100px">
+                    <h2>Pretzel Bites</h2>
+                    <p class="price">price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'pretzelBites', 'increment')">+</button>
+                        <p id="pretzelBitesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'pretzelBites', 'decrement')">-</button>
+                        </div>
+                </div>
+            </div>
+            <button type="button" class="btnClose applyAppBtn">Apply</button>
+            <button type="button" class="btnClose" onclick="closeMenuAppetizers()">Close</button>
+        </div>
+
+
+        <!-- Mains To Order -->
+        <div class="formPopup" id="MenuMains">
+            <div class="menuToOrder">
+                <div class="foodBox">
+                    <img class="" src="../img/ChickenBurger.png" width="150px" height="100px">
+                    <h2>Big Gary</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'chickenBurger', 'increment')">+</button>
+                        <p id="chickenBurgerCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'chickenBurger', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/BeefBurger.jpg" width="150px" height="100px">
+                    <h2>Blue's Burger</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'beefBurger', 'increment')">+</button>
+                        <p id="beefBurgerCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'beefBurger', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/ChickenNuggets.jpg" width="150px" height="100px">
+                    <h2>Chicken Nuggets</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'chickenNuggets', 'increment')">+</button>
+                        <p id="chickenNuggetsCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'chickenNuggets', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/ChickenStrips.jpg" width="150px" height="100px">
+                    <h2>Chicken Tenders</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'chickenStrips', 'increment')">+</button>
+                        <p id="chickenStripsCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'chickenStrips', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/ChickenWings.jpg" width="150px" height="100px">
+                    <h2>Chicken Wings</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'chickenWings', 'increment')">+</button>
+                        <p id="chickenWingsCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'chickenWings', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/FishBurger.jpg" width="150px" height="100px">
+                    <h2>Fish Burger</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'fishBurger', 'increment')">+</button>
+                        <p id="fishBurgerCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'fishBurger', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/FishNChips.jpg" width="150px" height="100px">
+                    <h2>Fish N Chips</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'fishNchips', 'increment')">+</button>
+                        <p id="fishNchipsCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'fishNchips', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/HotDog.jpg" width="150px" height="100px">
+                    <h2>Hot Dog</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'hotDog', 'increment')">+</button>
+                        <p id="hotDogCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'hotDog', 'decrement')">-</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnClose applyMainsBtn">Apply</button>
+            <button type="button" class="btnClose" onclick="closeMenuMains()">Close</button>
+        </div>
+
+
+        <!-- Sides To Order -->
+        <div class="formPopup" id="MenuSides">
+            <div class="menuToOrder">
+                <div class="foodBox">
+                    <img class="" src="../img/CurlyFries.jpg" width="150px" height="100px">
+                    <h2>Curly Fries</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'curlyFries', 'increment')">+</button>
+                        <p id="curlyFriesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'curlyFries', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/HomecutFries.jpg" width="150px" height="100px">
+                    <h2>Home-Cut Fries</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'homecutFries', 'increment')">+</button>
+                        <p id="homecutFriesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'homecutFries', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Salad.jpg" width="150px" height="100px">
+                    <h2>Salad</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'salad', 'increment')">+</button>
+                        <p id="saladCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'salad', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/SweetP.jpg" width="150px" height="100px">
+                    <h2>Sweet Potato Fries</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'sweetPotato', 'increment')">+</button>
+                        <p id="sweetPotatoCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'sweetPotato', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Tarters.jpg" width="150px" height="100px">
+                    <h2>Wedges</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'tarters', 'increment')">+</button>
+                        <p id="tartersCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'tarters', 'decrement')">-</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnClose applySidBtn">Apply</button>
+            <button type="button" class="btnClose" onclick="closeMenuSides()">Close</button>
+        </div>
+
+
+        <!-- DD To Order -->
+        <div class="formPopup" id="MenuDD">
+            <div class="menuToOrder">
+                <div class="foodBox">
+                    <img class="" src="../img/Brownie.jpg" width="150px" height="100px">
+                    <h2>Brownies</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'brownies', 'increment')">+</button>
+                        <p id="browniesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'brownies', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Churros.jpg" width="150px" height="100px">
+                    <h2>Churros</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'churros', 'increment')">+</button>
+                        <p id="churrosCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'churros', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/DonutHoles.jpg" width="150px" height="100px">
+                    <h2>Donut Holes</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'donutHoles', 'increment')">+</button>
+                        <p id="donutHolesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'donutHoles', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Cola.jpg" width="150px" height="100px">
+                    <h2>Cola</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'cola', 'increment')">+</button>
+                        <p id="colaCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'cola', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Coffee.jpg" width="150px" height="100px">
+                    <h2>Coffee</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'coffee', 'increment')">+</button>
+                        <p id="coffeeCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'coffee', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/MilkShakes.jpg" width="150px" height="100px">
+                    <h2>MilkShakes</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'milkShakes', 'increment')">+</button>
+                        <p id="milkShakesCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'milkShakes', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Tea.jpg" width="150px" height="100px">
+                    <h2>Tea</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'tea', 'increment')">+</button>
+                        <p id="teaCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'tea', 'decrement')">-</button>
+                    </div>
+                </div>
+                <div class="foodBox">
+                    <img class="" src="../img/Water.jpg" width="150px" height="100px">
+                    <h2>Water</h2>
+                    <p>price</p>
+                    <div class="counter">
+                        <button class="plus" onclick="changeItemCount(this, 'water', 'increment')">+</button>
+                        <p id="waterCount">0</p>
+                        <button class="minus" onclick="changeItemCount(this, 'water', 'decrement')">-</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnClose applyDDBtn">Apply</button>
+            <button type="button" class="btnClose" onclick="closeMenuDD()">Close</button>
+        </div>
+
+
+
+        <section id="payment">
+            <h1>Enter delivery information</h1>
+            <form id="infoForm">
+                <div class="formBox">
+                    <label for="name">First and Last Name:*</label></br>
+                    <input type="text" id="name" name="name"
+                    placeholder="Please enter your name here"
+                    maxlength="50" tabindex="1"/>
+                    </br></br>
+                    <label for="email">Email:*</label></br>
+                    <input type="text" id="email" name="email"
+                    placeholder="Please enter your email here"
+                    maxlength="50" tabindex="2"/>
+                    </br></br>
+                    <label for="address">Address:*</label></br>
+                    <input type="text" id="address" name="address"
+                    placeholder="Please enter your address here"
+                    maxlength="50" tabindex="3"/>
+                    </br></br>
+                </div>
+                <div class="formBox">
+                    <label for="payMethod">Payment Method:*</label></br>
+                    <input type="text" id="payMethod" name="payMethod" list="methods"
+                    placeholder="Please enter your payment method here"
+                    maxlength="50" tabindex="4"/>
+                    <datalist id="methods">
+                        <option value="Credit Card"></option>
+                        <option value="Debit Card"></option>
+                        <option value="Other Card"></option>
+                        <option value="When receiving order"></option>
+                    </datalist>
+                    </br></br>
+                    <label for="cardNum">Card Number (if applicable):</label></br>
+                    <input type="text" id="cardNum" name="cardNumber"
+                    placeholder="Please enter your card number here"
+                    maxlength="50" tabindex="5"/>
+                    </br></br>
+                    <label for="giftCard">Gift Card (if applicable):</label></br>
+                    <input type="text" id="giftCard" name="giftCard"
+                    placeholder="Please enter your gift card here"
+                    maxlength="50" tabindex="6"/>
+                    </br>
+                </div>
+                <div class="formAction">
+                    <input type="submit" value="Apply" class="form-control" />
+                    <input type="reset" value="Clear" class="form-control" />
+                </div>
+            </form>
+             
+            <h1>Check entered information</h1>
+            <div id="infoCheck"></div>
+            <div calss="end">
+                <button type="button" class="btnEnd" id="applyPayData">Apply</button>
+                <button type="button" class="btnEnd" id="clearPayData">Clear</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="../img/GarysBlueFooter.png" alt="Logo">
+        <div calss="navFooter">
+            <h3>Thank you for visiting Gary's Blue Diner!</h3>
+            <div class="nav">
+                <a href="../html/index.html">Home</a>
+                <a href="../html/Contact.html">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+            <p class="signFooter">&copy; 2024 Gary's Blue Diner</p>
+        </div>
+        <div class="socialMedia">
+            <p>Check out our social media</p>
+            <div class="linkMedia">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/order.js"></script>
+    <script>
+        function openMenuAppetizers() {
+        document.getElementById("MenuAppetizers").style.display = "block";
+      }
+        function closeMenuAppetizers() {
+        document.getElementById("MenuAppetizers").style.display = "none";
+      }
+        function openMenuMains() {
+        document.getElementById("MenuMains").style.display = "block";
+      }
+        function closeMenuMains() {
+        document.getElementById("MenuMains").style.display = "none";
+      }
+        function openMenuSides() {
+        document.getElementById("MenuSides").style.display = "block";
+      }
+        function closeMenuSides() {
+        document.getElementById("MenuSides").style.display = "none";
+      }
+        function openMenuDD() {
+        document.getElementById("MenuDD").style.display = "block";
+      }
+        function closeMenuDD() {
+        document.getElementById("MenuDD").style.display = "none";
+      }
+      function changeItemCount(element, itemId, action) {
+        var countElement = document.getElementById(itemId + 'Count');
+        var count = parseInt(countElement.textContent);
+
+        if (action === 'increment') {
+            count++;
+        } else if (action === 'decrement' && count > 0) {
+            count--;
+        }
+
+        countElement.textContent = count;
+    }
+    </script>
+</body>
+</html>
